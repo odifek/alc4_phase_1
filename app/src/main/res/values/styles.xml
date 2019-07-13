@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="actionBarTheme">@style/Theme.ALC.ActionBar</item>
+
+        <item name="alertDialogTheme">@style/Theme.ALC.AlertDialog</item>
+        <item name="fontFamily">@font/noto_sans</item>
+    </style>
+
+    <style name="Theme.ALC.ActionBar" parent="ThemeOverlay.MaterialComponents.ActionBar">
+
+    </style>
+
+    <style name="Theme.ALC.AlertDialog"
+        parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="colorPrimary">@color/colorTextPrimary</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+</resources>

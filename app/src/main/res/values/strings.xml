@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ALC 4 Odife</string>
+    <string name="welcome_to_alc">ALC 4.0</string>
+    <string name="about_alc">About ALC</string>
+    <string name="notification_invalid_ssl">Untrusted Certificate Received from this site. Do you want to proceed?</string>
+    <string name="okay">Continue</string>
+    <string name="welcome_to">Welcome to</string>
+    <string name="profile_picture">Profile Picture</string>
+    <string name="my_profile">My Profile</string>
+    <string name="my_name">Odife Kennedy</string>
+    <string name="android_developer">Android Developer</string>
+    <string name="nigeria">Nigeria</string>
+    <string name="my_email">kennedyodife@gmail.com</string>
+    <string name="my_phone">08052974928</string>
+    <string name="email_label">Email:</string>
+    <string name="country_label">Country:</string>
+    <string name="phone_number_label">Phone Number:</string>
+    <string name="slack_username_label">Slack Username:</string>
+    <string name="banner_description">Banner</string>
+</resources>

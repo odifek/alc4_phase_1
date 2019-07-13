@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:title="@string/my_profile" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingBottom="16dp"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <ImageView
+                android:id="@+id/imageview_banner"
+                android:layout_width="0dp"
+                android:layout_height="240dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/navigation_editor"
+                android:contentDescription="@string/banner_description"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageview_profile_pics"
+                android:layout_width="184dp"
+                android:layout_height="184dp"
+                android:contentDescription="@string/profile_picture"
+                android:scaleType="centerCrop"
+                app:civ_border_color="#ffffff"
+                app:civ_border_width="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageview_banner"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageview_banner"
+                tools:src="@drawable/myself" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <TextView
+                android:id="@+id/textView_country_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/country_label"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+            <TextView
+                android:id="@+id/textView_email_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                android:text="@string/email_label"
+                app:layout_constraintStart_toStartOf="@+id/textView_country_label"
+                app:layout_constraintTop_toBottomOf="@+id/textView_country_label" />
+
+            <TextView
+                android:id="@+id/textView_phone_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                android:text="@string/phone_number_label"
+                app:layout_constraintStart_toStartOf="@+id/textView_email_label"
+                app:layout_constraintTop_toBottomOf="@+id/textView_email_label" />
+
+            <TextView
+                android:id="@+id/textView5_slack_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                android:text="@string/slack_username_label"
+                app:layout_constraintStart_toStartOf="@+id/textView_phone_label"
+                app:layout_constraintTop_toBottomOf="@+id/textView_phone_label" />
+
+            <TextView
+                android:id="@+id/textView_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:text="@string/my_name"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageview_profile_pics" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="end"
+                app:constraint_referenced_ids="textView_country_label,textView5_slack_label,textView_phone_label,textView_email_label"
+                tools:layout_editor_absoluteX="411dp" />
+
+            <TextView
+                android:id="@+id/textView_track"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/android_developer"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                app:layout_constraintEnd_toEndOf="@+id/textView_name"
+                app:layout_constraintStart_toStartOf="@+id/textView_name"
+                app:layout_constraintTop_toBottomOf="@+id/textView_name" />
+
+            <TextView
+                android:id="@+id/textView_country"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/nigeria"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView_country_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/barrier" />
+
+            <TextView
+                android:id="@+id/textView_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/my_email"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                android:textStyle="italic"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView_email_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/barrier" />
+
+            <TextView
+                android:id="@+id/textView_phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/my_phone"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView_phone_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/barrier" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/my_name"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                android:textColor="@color/colorAccent"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView5_slack_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/barrier" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="8dp"
+                android:background="#23909090"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_track" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

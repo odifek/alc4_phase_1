@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/home/kennedy/AndroidStudioProjects/ALC4/ALC4Phase1/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_profile.xml",
+        "source": "/home/kennedy/AndroidStudioProjects/ALC4/ALC4Phase1/app/src/main/res/layout/activity_profile.xml"
+    },
+    {
+        "merged": "/home/kennedy/AndroidStudioProjects/ALC4/ALC4Phase1/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
+        "source": "/home/kennedy/AndroidStudioProjects/ALC4/ALC4Phase1/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/kennedy/AndroidStudioProjects/ALC4/ALC4Phase1/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_about_alc.xml",
+        "source": "/home/kennedy/AndroidStudioProjects/ALC4/ALC4Phase1/app/src/main/res/layout/activity_about_alc.xml"
+    }
+]

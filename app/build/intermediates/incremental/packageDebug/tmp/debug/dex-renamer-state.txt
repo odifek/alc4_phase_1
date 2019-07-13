@@ -1,0 +1,4 @@
+#Sat Jul 13 14:12:44 WAT 2019
+base.0=/home/kennedy/AndroidStudioProjects/ALC4/ALC4Phase1/app/build/intermediates/dex/debug/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
