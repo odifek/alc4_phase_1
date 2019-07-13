@@ -1,4 +1,0 @@
-#Fri Jul 12 04:38:19 WAT 2019
-base.0=/home/kennedy/AndroidStudioProjects/ALC4/ALC4Phase1/app/build/intermediates/transforms/r8/release/0/classes.dex
-path.0=classes.dex
-renamed.0=classes.dex
