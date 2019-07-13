@@ -11,6 +11,11 @@
 
         <item name="alertDialogTheme">@style/Theme.ALC.AlertDialog</item>
         <item name="fontFamily">@font/noto_sans</item>
+
+    </style>
+
+    <style name="AppTheme.Alc" parent="AppTheme">
+
     </style>
 
     <style name="Theme.ALC.ActionBar" parent="ThemeOverlay.MaterialComponents.ActionBar">

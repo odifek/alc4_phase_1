@@ -27,20 +27,28 @@
                 app:title="@string/my_profile" />
         </com.google.android.material.appbar.AppBarLayout>
 
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clipToPadding="false"
-            android:paddingBottom="16dp"
-            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+            android:paddingBottom="16dp">
 
             <ImageView
                 android:id="@+id/imageview_banner"
                 android:layout_width="0dp"
-                android:layout_height="240dp"
+                android:layout_height="@dimen/banner_height"
+                android:contentDescription="@string/banner_description"
                 android:scaleType="centerCrop"
                 android:src="@drawable/navigation_editor"
-                android:contentDescription="@string/banner_description"
+                android:background="?selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -82,8 +90,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
                 android:text="@string/email_label"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
                 app:layout_constraintStart_toStartOf="@+id/textView_country_label"
                 app:layout_constraintTop_toBottomOf="@+id/textView_country_label" />
 
@@ -92,8 +100,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
                 android:text="@string/phone_number_label"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
                 app:layout_constraintStart_toStartOf="@+id/textView_email_label"
                 app:layout_constraintTop_toBottomOf="@+id/textView_email_label" />
 
@@ -102,8 +110,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
                 android:text="@string/slack_username_label"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
                 app:layout_constraintStart_toStartOf="@+id/textView_phone_label"
                 app:layout_constraintTop_toBottomOf="@+id/textView_phone_label" />
 
@@ -200,7 +208,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView_track" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-
+        </androidx.core.widget.NestedScrollView>
 
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>

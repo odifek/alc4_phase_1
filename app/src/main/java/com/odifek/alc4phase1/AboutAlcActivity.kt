@@ -40,10 +40,22 @@ class AboutAlcActivity : AppCompatActivity() {
                 handler: SslErrorHandler?,
                 error: SslError?
             ) {
+
+                val message = when(error?.primaryError) {
+                    SslError.SSL_UNTRUSTED -> "The certificate authority is not trusted!"
+                    SslError.SSL_EXPIRED -> "The certificate has expired!"
+                    SslError.SSL_IDMISMATCH -> "Certificate Hostname mismatch!"
+                    SslError.SSL_NOTYETVALID -> "The certificate is not yet valid!"
+                    SslError.SSL_DATE_INVALID -> "The certificate has invalid date!"
+                    else -> "The certificate has some errors!"
+                } + " Do you want to continue anyway?"
+
                 val builder = AlertDialog.Builder(this@AboutAlcActivity)
-                builder.setMessage(R.string.notification_invalid_ssl)
+                builder.setTitle("SSL Certificate Error!")
+                builder.setMessage(message)
                 builder.setPositiveButton(R.string.okay) { dialog, _ ->
                     handler?.proceed()
+                    binding.webviewAboutAlc.settings
                     dialog.dismiss()
                 }
                 builder.setNegativeButton(android.R.string.cancel) { _, _ ->
@@ -55,6 +67,15 @@ class AboutAlcActivity : AppCompatActivity() {
         }
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        binding.webviewAboutAlc.loadUrl("https://andela.com/alc/")
+        if (savedInstanceState == null) {
+            binding.webviewAboutAlc.loadUrl("https://andela.com/alc/")
+        } else {
+            binding.webviewAboutAlc.restoreState(savedInstanceState)
+        }
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        binding.webviewAboutAlc.saveState(outState)
+        super.onSaveInstanceState(outState)
     }
 }
