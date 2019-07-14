@@ -55,7 +55,6 @@ class AboutAlcActivity : AppCompatActivity() {
                 builder.setMessage(message)
                 builder.setPositiveButton(R.string.okay) { dialog, _ ->
                     handler?.proceed()
-                    binding.webviewAboutAlc.settings
                     dialog.dismiss()
                 }
                 builder.setNegativeButton(android.R.string.cancel) { _, _ ->
@@ -68,7 +67,7 @@ class AboutAlcActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         if (savedInstanceState == null) {
-            binding.webviewAboutAlc.loadUrl("https://andela.com/alc/")
+            binding.webviewAboutAlc.loadUrl(getString(R.string.url_about_alc))
         } else {
             binding.webviewAboutAlc.restoreState(savedInstanceState)
         }

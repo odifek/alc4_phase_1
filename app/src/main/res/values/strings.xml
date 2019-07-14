@@ -17,4 +17,5 @@
     <string name="phone_number_label">Phone Number:</string>
     <string name="slack_username_label">Slack Username:</string>
     <string name="banner_description">Banner</string>
+    <string name="url_about_alc">https://andela.com/alc/</string>
 </resources>
