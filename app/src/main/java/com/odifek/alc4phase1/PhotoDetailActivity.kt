@@ -1,8 +1,8 @@
 package com.odifek.alc4phase1
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.databinding.DataBindingUtil
 import com.bumptech.glide.Glide
@@ -14,6 +14,17 @@ class PhotoDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_photo_detail)
+
+        setSupportActionBar(binding.toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        window.decorView.setOnSystemUiVisibilityChangeListener { visibility ->
+            if (visibility and View.SYSTEM_UI_FLAG_FULLSCREEN == 0) {
+                supportActionBar?.show()
+            } else {
+                supportActionBar?.hide()
+            }
+        }
 
         ViewCompat.setTransitionName(binding.photoviewDetail, getString(R.string.profile_picture))
 
